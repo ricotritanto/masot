@@ -26,4 +26,13 @@ class Backend extends CI_Controller {
 		$this->load->view('backend/index');
 		$this->load->view('backend/layouts/footer');
 	}
+
+	public function categories()
+	{
+		$this->load->view('backend/layouts/header');
+		$this->load->view('backend/layouts/head');
+		$this->load->view('backend/layouts/slider');
+		$this->load->view('backend/categories/index');
+		$this->load->view('backend/layouts/footer');
+	}
 }

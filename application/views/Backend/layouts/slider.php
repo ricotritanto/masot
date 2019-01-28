@@ -31,17 +31,10 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="<?php echo base_url();?>Backend/categories">
             <i class="fa fa-files-o"></i>
             <span>Categories</span>
-            <span class="pull-right-container">
-            </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-          </ul>
         </li>       
         
         <li class="treeview">
@@ -53,7 +46,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
+            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> ADD</a></li>
             <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
             <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
             <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>

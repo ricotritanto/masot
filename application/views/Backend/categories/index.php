@@ -4,10 +4,10 @@
           <div class="col-xs-8">
             <div class="box">
               <div class="box-header">
-                <h3 class="box-title">Menu Category</h3>
+                <h3 class="box-title">Menu Categories</h3>
               </div>
               <div class="col-md-6">
-                  <a href="{{ url('/kategori/new') }}" class="btn btn-primary btn-sm float-right">Add Data</a>
+                  <a href="<?php echo base_url();?>backend/add_categories" class="btn btn-primary btn-sm float-right">Add Data</a>
               </div>
               <!-- /.box-header -->
               <div class="box-body">
@@ -30,34 +30,24 @@
                   </tr>
                   </thead>
                   <tbody>
-                      @php ($no =1)
-                      @foreach($categories as $kategori)   
+                      <?php $no=1;
+                      foreach($categories as $kategori)
+                      {?>
                       <tr>
-                        <td>{{ $no++}}</td>
-                          <td>{{ $kategori->name }}</td>
+                          <td><?php echo $no++; ?></td>
+                          <td><?php echo $kategori->category_name ?></td>
                           <td>
-                          <form action="{{ url('/kategori/' . $kategori->id) }}" method="POST">
+                          <form action="<?php echo base_url('backend/categories_update/' . $kategori->category_id)?>" method="POST">
                               <input type="hidden" name="_method" value="DELETE" class="form-control">
-                              <a href="{{ url('/kategori/' . $kategori->id) }}" class="btn btn-warning btn-sm">Update</a>
+                              <a href="<?php base_url('backend/categories_update/' . $kategori->category_id)?>" class="btn btn-warning btn-sm">Update</a>
                               <button class="btn btn-danger btn-sm">Delete</button>
-                              </form>
+                            </form>
                           </td>
                       </tr>
-                       @empty
+                       <?php } ?>
                       <tr>
                           <td class="text-center" colspan="6">Tidak ada data</td>
                       </tr>
-                      @endforeach
-                 
-                  <!-- <tfoot>
-                  <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
-                  </tr>
-                  </tfoot> -->
                 </table>
               </div>
               <!-- /.box-body -->

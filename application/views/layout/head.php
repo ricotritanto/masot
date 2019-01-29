@@ -13,8 +13,8 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="header_contact_details">
-                            <a href="#"><i class="fa fa-phone"></i>+1 (168) 314 5016</a>
-                            <a href="#"><i class="fa fa-envelope-o"></i>+1 (168) 314 5016</a>
+                            <a href="#"><i class="fa fa-phone"></i>+62 81 220 888 990</a>
+                            <!-- <a href="#"><i class="fa fa-envelope-o"></i>+1 (168) 314 5016</a> -->
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -50,7 +50,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"><img src="<?php echo base_url();?>assets/front/redcayenne/img/logo-1.png" alt=""></a>
+                        <a class="navbar-brand" href="#"><img src="<?php echo base_url();?>assets/front/redcayenne/img/logo-2.png" alt=""></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->

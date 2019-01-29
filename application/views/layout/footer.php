@@ -7,7 +7,7 @@
                         <div class="col-md-3">
                             <aside class="f_widget about_widget">
                                 <div class="f_w_title">
-                                    <h4>ABOUT RedCayenne</h4>
+                                    <h4>ABOUT STAR CCTV</h4>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet, consectur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ut.</p>
                                 <ul>
@@ -25,9 +25,9 @@
                                 </div>
                                 <p>Have questions, comments or just want to say hello:</p>
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-envelope"></i>backpiper.com@gmail.com</a></li>
-                                    <li><a href="#"><i class="fa fa-phone"></i>+88 01911 854 378</a></li>
-                                    <li><a href="#"><i class="fa fa-map-marker"></i>5001 E. Colorado Blvd. Suite 820,<br /> Pasadena, CA 91106</a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i>info@starcctv.net W</a></li>
+                                    <li><a href="#"><i class="fa fa-phone"></i>+62 81 220 888 990</a></li>
+                                    <li><a href="#"><i class="fa fa-map-marker"></i>Office : Ngemplak Brat III No 17 Tembalang, Semarang</a></li>
                                 </ul>
                             </aside>
                         </div>

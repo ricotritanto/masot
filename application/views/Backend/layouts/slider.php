@@ -34,7 +34,7 @@
         </li>
         <li>
           <a href="<?php echo base_url();?>Backend/categories">
-            <i class="fa fa-th"></i> <span>Brands</span>
+            <i class="fa fa-th"></i> <span>Categories</span>
           </a>
         </li>
         

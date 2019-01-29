@@ -46,6 +46,22 @@ class Backend extends CI_Controller {
 			'category_name' => $this->input->post('name')
 			);
 		$this->categories_model->insert($data);
+		$this->session->set_flashdata('msg', 'Insert Success');
         redirect('backend/categories');
+	}
+
+	public function categories_update($id)
+	{
+		$data['categories'] = $this->categories_model->getCategories($id); 
+        $this->load->view('backend/layouts/header');
+		$this->load->view('backend/layouts/head');
+		$this->load->view('backend/layouts/slider');
+		$this->load->view('backend/categories/update', $data);
+		$this->load->view('backend/layouts/footer');
+	}
+
+	public function categories_updated()
+	{
+
 	}
 }

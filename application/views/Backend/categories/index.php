@@ -21,6 +21,16 @@
                       </div>
                    </div>
                           @endif -->
+                    <?php if($this->session->flashdata('msg')): ?>
+                        <div class="col-md-3">
+                          <div class="box box-success">
+                              <div class="box-header with-border">
+                                  <?php echo $this->session->flashdata('msg'); ?>
+                                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                              </div>
+                          </div>
+                        </div>
+                    <?php endif; ?>      
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
@@ -37,17 +47,13 @@
                           <td><?php echo $no++; ?></td>
                           <td><?php echo $kategori->category_name ?></td>
                           <td>
-                          <form action="<?php echo base_url('backend/categories_update/' . $kategori->category_id)?>" method="POST">
-                              <input type="hidden" name="_method" value="DELETE" class="form-control">
-                              <a href="<?php base_url('backend/categories_update/' . $kategori->category_id)?>" class="btn btn-warning btn-sm">Update</a>
+                              <a href="<?php echo base_url('backend/categories_update/' . $kategori->category_id)?>">
+                               <button class="btn btn-warning btn-sm">Update</button>
+                              <a href="<?php echo base_url('backend/categories_delete/' . $kategori->category_id)?>">
                               <button class="btn btn-danger btn-sm">Delete</button>
-                            </form>
                           </td>
                       </tr>
                        <?php } ?>
-                      <tr>
-                          <td class="text-center" colspan="6">Tidak ada data</td>
-                      </tr>
                 </table>
               </div>
               <!-- /.box-body -->

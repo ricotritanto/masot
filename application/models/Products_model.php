@@ -14,26 +14,17 @@ class Products_model extends CI_Model
 
 	public function listproducts()
 	{
-		// $query = $this->db->query("select * from visit_report, cabang where visit_report.no_id=cabang.no_id order by str_to_date(date_visit, '%d/%m/%Y') DESC");
-		// if ($query->num_rows() > 0) 
-		// {
-		// 	foreach ($query->result() as $data) 
-		// 	{
-		// 		$hasil[]=$data;
-		// 	}
-		// 	return $hasil;
-		// }
-
-		// $query = $this->db->get('visit_report');
-		// if ($query->num_rows() > 0) 
-		// {
-		// 	foreach ($query->result() as $data) 
-		// 	{
-		// 		$hasil[]=$data;
-		// 	}
-		// 	return $hasil;
-		// }
+		return $this->db->query("select a.*,b.brand_name,c.category_name from products a join brands b on a.brand_id=b.brand_id join categories c on a.category_id=c.category_id order by a.product_id desc");
 	}
 
+
+
+
+
+	public function delete($id)
+	{
+		$this->db->where('product_id',$id);
+	 	$this->db->delete('products');
+	}
 
 }

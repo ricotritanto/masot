@@ -42,7 +42,7 @@
                           <td><?php echo $row['product_name'] ?></td>
                           <td><?php echo $row['category_name'] ?></td>
                           <td><?php echo $row['brand_name'] ?></td>
-                          <td><img src="<?php echo base_url('images/products/thumb/'.$row['picture'])?>"></td>
+                          <td><!-- <a href="#" class="thumbnail" data-toggle="modal" data-target="#lightbox"> --><a href="<?php echo base_url('images/products/'.$row['picture'])?>" alt="" data-lightbox/>view image </a></td>
                           <td><?php echo substr($row['description'],0,25) ?></td>
                           <td>
                               <a href="<?php echo base_url('backend/products_update/' . $row['product_id'])?>">
@@ -62,6 +62,19 @@
   </section>
 </div>
 
-
-
-
+<!-- pop up preview image -->
+<script type="text/javascript">
+ $(document).ready(function() {
+  $('.image-link').magnificPopup({type:'image'});
+});
+ </script>
+<!-- <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="" alt="" />
+            </div>
+        </div>
+    </div>
+</div> -->

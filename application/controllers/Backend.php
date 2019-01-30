@@ -288,7 +288,7 @@ class Backend extends CI_Controller {
 
 	public function products_update()
 	{
-
+		
 	}
 
 	public function products_updated()

@@ -4,10 +4,10 @@
           <div class="col-xs-8">
             <div class="box">
               <div class="box-header">
-                <h3 class="box-title">Menu Categories</h3>
+                <h3 class="box-title">Menu Brands</h3>
               </div>
               <div class="col-md-6">
-                  <a href="<?php echo base_url();?>backend/add_categories" class="btn btn-primary btn-sm float-right">Add Data</a>
+                  <a href="<?php echo base_url();?>backend/add_brands" class="btn btn-primary btn-sm float-right">Add Data</a>
               </div>
               <!-- /.box-header -->
               <div class="box-body">
@@ -35,21 +35,21 @@
                   <thead>
                   <tr>
                     <th>NO</th>
-                    <th>Categories</th>
+                    <th>Brands</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                       <?php $no=1;
-                      foreach($categories as $kategori)
+                      foreach($brands as $row)
                       {?>
                       <tr>
                           <td><?php echo $no++; ?></td>
-                          <td><?php echo $kategori->category_name ?></td>
+                          <td><?php echo $row->brand_name ?></td>
                           <td>
-                              <a href="<?php echo base_url('backend/categories_update/' . $kategori->category_id)?>">
+                              <a href="<?php echo base_url('backend/brands_update/' . $row->brand_id)?>">
                                <button class="btn btn-warning btn-sm">Update</button>
-                              <a href="<?php echo base_url('backend/categories_delete/' . $kategori->category_id)?>" onClick="return confirm('Are your sure delete category <?php echo  $kategori->category_name;?>?')">
+                              <a href="<?php echo base_url('backend/brands_delete/' . $row->brand_id)?>" onClick="return confirm('Are your sure delete category <?php echo  $row->brand_name;?>?')">
                               <button class="btn btn-danger btn-sm">Delete</button>
                           </td>
                       </tr>

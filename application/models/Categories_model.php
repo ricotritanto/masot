@@ -8,7 +8,6 @@ class Categories_model extends CI_Model
 {
 	
 	private $_table = "categories";
-	public $cateogory_name;
 	function __construct()
 	{
 		# code...
@@ -36,10 +35,28 @@ class Categories_model extends CI_Model
 
 	public function getCategories($id)
 	{
+        $this->db->where('category_id',$id);
+	 	$query = $this->db->get('categories');
+	 	if($query->num_rows() > 0)
+	 	{
+	 		$data = $query->row();
+			$query->free_result();
+	 	}else
+	 	{
+	 		$data = NULL;
+	 	}
+	 	return $data;
+	}
+
+	public function update($data, $id)
+	{
 		$this->db->where('category_id', $id);
-        $this->db->select("*");
-        $this->db->from("categories");
-        
-        return $this->db->get();
+        $this->db->update('categories',$data);
+	}
+
+	public function delete($id)
+	{
+		$this->db->where('category_id',$id);
+	 	$this->db->delete('categories');
 	}
 }

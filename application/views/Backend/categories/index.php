@@ -4,10 +4,10 @@
           <div class="col-xs-8">
             <div class="box">
               <div class="box-header">
-                <h3 class="box-title">Menu Category</h3>
+                <h3 class="box-title">Menu Categories</h3>
               </div>
               <div class="col-md-6">
-                  <a href="{{ url('/kategori/new') }}" class="btn btn-primary btn-sm float-right">Add Data</a>
+                  <a href="<?php echo base_url();?>backend/add_categories" class="btn btn-primary btn-sm float-right">Add Data</a>
               </div>
               <!-- /.box-header -->
               <div class="box-body">
@@ -21,6 +21,16 @@
                       </div>
                    </div>
                           @endif -->
+                    <?php if($this->session->flashdata('msg')): ?>
+                        <div class="col-md-3">
+                          <div class="box box-success">
+                              <div class="box-header with-border">
+                                  <?php echo $this->session->flashdata('msg'); ?>
+                                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                              </div>
+                          </div>
+                        </div>
+                    <?php endif; ?>      
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
@@ -30,34 +40,20 @@
                   </tr>
                   </thead>
                   <tbody>
-                      @php ($no =1)
-                      @foreach($categories as $kategori)   
+                      <?php $no=1;
+                      foreach($categories as $kategori)
+                      {?>
                       <tr>
-                        <td>{{ $no++}}</td>
-                          <td>{{ $kategori->name }}</td>
+                          <td><?php echo $no++; ?></td>
+                          <td><?php echo $kategori->category_name ?></td>
                           <td>
-                          <form action="{{ url('/kategori/' . $kategori->id) }}" method="POST">
-                              <input type="hidden" name="_method" value="DELETE" class="form-control">
-                              <a href="{{ url('/kategori/' . $kategori->id) }}" class="btn btn-warning btn-sm">Update</a>
+                              <a href="<?php echo base_url('backend/categories_update/' . $kategori->category_id)?>">
+                               <button class="btn btn-warning btn-sm">Update</button>
+                              <a href="<?php echo base_url('backend/categories_delete/' . $kategori->category_id)?>" onClick="return confirm('Are your sure delete category <?php echo  $kategori->category_name;?>?')">
                               <button class="btn btn-danger btn-sm">Delete</button>
-                              </form>
                           </td>
                       </tr>
-                       @empty
-                      <tr>
-                          <td class="text-center" colspan="6">Tidak ada data</td>
-                      </tr>
-                      @endforeach
-                 
-                  <!-- <tfoot>
-                  <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
-                  </tr>
-                  </tfoot> -->
+                       <?php } ?>
                 </table>
               </div>
               <!-- /.box-body -->

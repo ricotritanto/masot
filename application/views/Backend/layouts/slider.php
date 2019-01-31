@@ -30,13 +30,18 @@
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
         </li>
-        <li class="treeview">
-          <a href="<?php echo base_url();?>Backend/categories">
-            <i class="fa fa-files-o"></i>
-            <span>Categories</span>
           </a>
-        </li>       
-        
+        </li>
+        <li>
+          <a href="<?php echo base_url();?>Backend/categories">
+            <i class="fa fa-th"></i> <span>Categories</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo base_url();?>Backend/brands">
+            <i class="fa fa-edit"></i> <span>Brands</span>
+          </a>
+        </li>    
         <li class="treeview">
           <a href="#">
             <i class="fa fa-laptop"></i>
@@ -46,27 +51,14 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> ADD</a></li>
+            <li><a href="<?php echo base_url();?>Backend/Products"><i class="fa fa-circle-o"></i> List </a></li>
             <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
             <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
             <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
             <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
             <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
           </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>Brands</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-          </ul>
-        </li>       
+        </li>          
         <li class="treeview">
           <a href="#">
             <i class="fa fa-folder"></i> <span>Examples</span>

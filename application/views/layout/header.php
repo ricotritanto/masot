@@ -2,23 +2,21 @@
     <div class="agileits_header">
         <div class="container">
             <div class="w3l_offers">
-                <p>SALE UP TO 70% OFF. USE CODE "SALE70%" . <a href="products.html">SHOP NOW</a></p>
+                <img src="<?php echo base_url();?>assets/front/market/images/logo.png"><p>SECURITY SYSTEM SPESIALIST </p>
             </div>
-            <div class="agile-login">
+            <div class="w3l_offers">
                 <ul>
-                    <li><a href="registered.html"> Create Account </a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="contact.html">Help</a></li>
-                    
+                    <li><p> <img src="<?php echo base_url();?>assets/front/market/images/wa.png"> (+62) 81 220 888 990</p></li>
+                    <li><p> ☎ (+62) 81 220 888 990</p></li>
                 </ul>
             </div>
-            <div class="product_list_header">  
+            <!-- <div class="agileits_header">  
                     <form action="#" method="post" class="last"> 
                         <input type="hidden" name="cmd" value="_cart">
                         <input type="hidden" name="display" value="1">
                         <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
                     </form>  
-            </div>
+            </div> -->
             <div class="clearfix"> </div>
         </div>
     </div>
@@ -27,12 +25,11 @@
         <div class="container">
         <div class="w3ls_logo_products_left1">
                 <ul class="phone_email">
-                    <li><i class="fa fa-phone" aria-hidden="true"></i>Order online or call us : (+0123) 234 567</li>
-                    
+                    <li><i class="fa fa-phone" aria-hidden="true"></i>Order call us : (+62) 81 220 888 990</li>
                 </ul>
             </div>
             <div class="w3ls_logo_products_left">
-                <h1><a href="index.html">super Market</a></h1>
+                <h1><a href="index.html">STARCCTV</a></h1>
             </div>
         <div class="w3l_search">
             <form action="#" method="post">
@@ -66,7 +63,7 @@
                                     <li class="active"><a href="index.html" class="act">Home</a></li>   
                                     <!-- Mega Menu -->
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Groceries<b class="caret"></b></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="row">
                                                 <div class="multi-gd-img">
@@ -85,7 +82,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Household<b class="caret"></b></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brands<b class="caret"></b></a>
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="row">
                                                 <div class="multi-gd-img">
@@ -103,67 +100,8 @@
                                                 
                                             </div>
                                         </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Personal Care<b class="caret"></b></a>
-                                        <ul class="dropdown-menu multi-column columns-3">
-                                            <div class="row">
-                                                <div class="multi-gd-img">
-                                                    <ul class="multi-column-dropdown">
-                                                        <h6>Baby Care</h6>
-                                                        <li><a href="personalcare.html">Baby Soap</a></li>
-                                                        <li><a href="personalcare.html">Baby Care Accessories</a></li>
-                                                        <li><a href="personalcare.html">Baby Oil & Shampoos</a></li>
-                                                        <li><a href="personalcare.html">Baby Creams & Lotion</a></li>
-                                                        <li><a href="personalcare.html"> Baby Powder</a></li>
-                                                        <li><a href="personalcare.html">Diapers & Wipes</a></li>
-                                                    </ul>
-                                                </div>
-                                                
-                                            </div>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Packaged Foods<b class="caret"></b></a>
-                                        <ul class="dropdown-menu multi-column columns-3">
-                                            <div class="row">
-                                                <div class="multi-gd-img">
-                                                    <ul class="multi-column-dropdown">
-                                                        <h6>All Accessories</h6>
-                                                        <li><a href="packagedfoods.html">Baby Food</a></li>
-                                                        <li><a href="packagedfoods.html">Dessert Items</a></li>
-                                                        <li><a href="packagedfoods.html">Biscuits</a></li>
-                                                        <li><a href="packagedfoods.html">Breakfast Cereals</a></li>
-                                                        <li><a href="packagedfoods.html"> Canned Food </a></li>
-                                                        <li><a href="packagedfoods.html">Chocolates & Sweets</a></li>
-                                                    </ul>
-                                                </div>
-                                                
-                                            
-                                            </div>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Beverages<b class="caret"></b></a>
-                                        <ul class="dropdown-menu multi-column columns-3">
-                                            <div class="row">
-                                                <div class="multi-gd-img">
-                                                    <ul class="multi-column-dropdown">
-                                                        <h6>Tea & Coeffe</h6>
-                                                        <li><a href="beverages.html">Green Tea</a></li>
-                                                        <li><a href="beverages.html">Ground Coffee</a></li>
-                                                        <li><a href="beverages.html">Herbal Tea</a></li>
-                                                        <li><a href="beverages.html">Instant Coffee</a></li>
-                                                        <li><a href="beverages.html"> Tea </a></li>
-                                                        <li><a href="beverages.html">Tea Bags</a></li>
-                                                    </ul>
-                                                </div>
-                            
-                                            </div>
-                                        </ul>
-                                    </li>
-                                    <li><a href="gourmet.html">Gourmet</a></li>
-                                    <li><a href="offers.html">Offers</a></li>
+                                    </li>                            
+                                    <li><a href="gourmet.html">About Us</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </div>

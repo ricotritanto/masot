@@ -14,6 +14,7 @@
 				</div>
 				<?php endif; ?>
 	            <form class="form-horizontal" action="<?php echo base_url();?>backend/products_updated" method="post" enctype="multipart/form-data">
+	            <input type="hidden" name='id' value="<?php echo $product_id;?>"> 
 	              <div class="box-body">
 	                <div class="form-group">
 	                  <label for="" class="col-sm-2 control-label">Categories</label>
@@ -21,11 +22,19 @@
 	                    <select class="form-control" name="category">
 		                    <option>-- Categories--</option>
 		                    <?php
-								foreach ($categories as $tampil) { ?>
-									<option value="<?php echo $tampil->category_id;?>"><?php echo $tampil->category_name;?></option>
-								<?php
+								foreach ($categories as $tampil) { 
+									if($category_id==$tampil->category_id)
+									{?>
+										<option value="<?php echo $tampil->category_id;?>" selected="selected"><?php echo $tampil->category_name;?></option>
+										<?php
+									}
+									else
+									{?>
+										<option value="<?php echo $tampil->category_id;?>"><?php echo $tampil->category_name;?></option>
+									<?php
+									}
 								}
-								?>
+							?>
 			            </select>
 	                  </div>
 	                </div>
@@ -37,11 +46,20 @@
 	                    <select class="form-control" name="brand">
 		                    <option>-- Brands --</option>
 		                    <?php
-								foreach ($brands as $tampil) { ?>
-									<option value="<?php echo $tampil->brand_id;?>"><?php echo $tampil->brand_name;?></option>
-								<?php
+								foreach ($brands as $tampil) {
+								if ($brand_id==$tampil->brand_id) 
+								{?>
+								 	<option value="<?php echo $tampil->brand_id;?>" selected="selected"><?php echo $tampil->brand_name;?></option>
+									<?php
 								}
-								?>
+								else
+								{?>
+									<option value="<?php echo $tampil->brand_id;?>"><?php echo $tampil->brand_name;?></option>
+								 <?php
+								} 									
+								
+								}
+							?>
 			            </select>
 	                  </div>
 	                </div>
@@ -50,7 +68,7 @@
 	                <div class="form-group">
 	                  <label for="" class="col-sm-2 control-label">Products</label>
 	                  <div class="col-sm-10">
-	                    <input type="text" class="form-control" name="product" required placeholder="Enter Product...">
+	                    <input type="text" class="form-control" name="product" required value="<?php echo $product_name;?>">
 	                  </div>
 	                </div>
 	              </div>
@@ -68,14 +86,14 @@
 	                  <label for="" class="col-sm-2 control-label">Description</label>
 	                  <div class="col-sm-10">
 	                    	<textarea class="textarea" placeholder="Place some text here" name="desc" 
-                          	style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                          	style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $description;?></textarea>
 	                  </div>
 	                </div>
 	               </div>
 
 	              <!-- /.box-body -->
 	              <div class="box-footer">
-	                <button type="submit" class="btn btn-info pull-right">Save</button>
+	                <button type="submit" class="btn btn-info pull-right">Update</button>
 	              </div>
 	              <!-- /.box-footer -->
 	            </form>

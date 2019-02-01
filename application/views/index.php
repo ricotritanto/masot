@@ -14,16 +14,15 @@
                                 <h5>Advertised this week</h5>
                                 <p class="w3l-ad">We've pulled together all our advertised offers into one place, so you won't miss out on a great deal.</p>
                             </div>
+                                                          
+                            <div class="agile_top_brands_grids">
                             <?php foreach($products->result_array() as $row)
                             {?>
-
-                            
-                            <div class="agile_top_brands_grids">
                                 <div class="col-md-4 top_brand_left">
                                     <div class="hover14 column">
                                         <div class="agile_top_brand_left_grid">
                                             <div class="agile_top_brand_left_grid_pos">
-                                                <img src="<?php echo base_url();?>assets/front/images/offer.png" alt=" " class="img-responsive" />
+                                                <img src="<?php echo base_url();?>assets/front/market/images/offer.png" alt=" " class="img-responsive" />
                                             </div>
                                             <div class="agile_top_brand_left_grid1">
                                                 <figure>
@@ -44,13 +43,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>                               
+                                </div>    <?php }?>                                                 
                                 <div class="clearfix"> </div>
-                            </div>
-                            <?php }?>
-                            
-                                <div class="clearfix"> </div>
-                            </div>
+                            </div> 
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="tours" aria-labelledby="tours-tab">
                             <div class="agile-tp">

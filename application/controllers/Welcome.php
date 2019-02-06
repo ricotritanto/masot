@@ -29,6 +29,10 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$data['products'] = $this->front_model->listproducts();
+		$data['products2'] = $this->front_model->listproducts2();
+		$data['accesories'] = $this->front_model->listaccesories();
+		$data['accesories2'] = $this->front_model->listaccesories2();
+		// print_r($data['accesories']);exit();
 		
 		$this->load->view('layout/header');
 		$this->load->view('layout/head');

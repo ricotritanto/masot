@@ -14,8 +14,28 @@ class Front_model extends CI_Model
 
 	public function listproducts()
 	{
-		return $this->db->query("select a.*,b.brand_name,c.category_name from products a join brands b on a.brand_id=b.brand_id join categories c on a.category_id=c.category_id order by a.product_id desc");
+		return $this->db->query("select a.*,b.brand_name,c.category_name from products a join brands b on a.brand_id=b.brand_id join categories c on a.category_id=c.category_id order by a.product_id desc limit 3");
 	}
+
+	public function listproducts2()
+	{
+		return $this->db->query("select a.*,b.brand_name,c.category_name from products a join brands b on a.brand_id=b.brand_id join categories c on a.category_id=c.category_id order by a.product_id asc limit 3");
+	}
+
+	public function listaccesories()
+	{
+		return $this->db->query("select a.*,b.brand_name,c.category_name from products a join brands b on a.brand_id=b.brand_id join categories c on a.category_id=c.category_id AND c.category_name='accessories' order by a.product_id asc limit 3");
+	}
+
+	public function listaccesories2()
+	{
+		return $this->db->query("select a.*,b.brand_name,c.category_name from products a join brands b on a.brand_id=b.brand_id join categories c on a.category_id=c.category_id AND c.category_name='accessories' order by a.product_id desc limit 3");
+	}
+
+	// public function listproducts2()
+	// {
+	// 	return $this->db->query("select a.*,b.brand_name,c.category_name from products a join brands b on a.brand_id=b.brand_id join categories c on a.category_id=c.category_id order by a.product_id asc limit 3");
+	// }
 
 	public function insert($data)
 	{

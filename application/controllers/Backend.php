@@ -8,6 +8,7 @@ class Backend extends CI_Controller {
 		$this->load->model('categories_model');
 		$this->load->model('brands_model');
 		$this->load->model('products_model');
+		$this->load->model('Backend_model');
 		$this->load->library('form_validation');
         $this->load->helper(array('url','form'));
 	}
@@ -418,4 +419,36 @@ class Backend extends CI_Controller {
 		$this->session->set_flashdata('msg', 'Delete Success');
 		redirect('backend/products');
 	}
+
+	/*======================end product ==========================*/
+
+	/*======================client ===============================*/
+
+	public function Clients()
+	{
+		$data['client'] = $this->Backend_model->listclients();
+		$this->load->view('backend/layouts/header');
+		$this->load->view('backend/layouts/head');
+		$this->load->view('backend/layouts/slider');
+		$this->load->view('backend/clients/index',$data);
+		$this->load->view('backend/layouts/footer');
+	}
+
+	public function add_clients()
+	{
+		$data['products'] = $this->products_model->getproducts();
+
+		$this->load->view('backend/layouts/header');
+		$this->load->view('backend/layouts/head');
+		$this->load->view('backend/layouts/slider');
+		$this->load->view('backend/clients/add',$data);
+		$this->load->view('backend/layouts/footer');
+	}
+
+	public function save_clients()
+	{
+
+	}
+
+	
 }

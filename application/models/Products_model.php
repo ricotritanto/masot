@@ -28,4 +28,10 @@ class Products_model extends CI_Model
 	 	$this->db->delete('products');
 	}
 
+	public function getproducts()
+	{
+		$query = $this->db->get('products');
+        return $query->result();
+	}
+
 }
